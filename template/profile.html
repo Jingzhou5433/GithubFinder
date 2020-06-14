@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <title>showProfile</title>
+</head>
+<body>
+    <div class="card card-body mb-3">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-fluid mb-2" src="${user.avatar_url}">
+                <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block">View Profile</a>
+                
+            </div>
+            <div class="col-md-9">
+                <span class="badge badge-secondary">Public Repos: ${user.public_repos}</span>
+                <span class="badge badge-secondary">Public Gists: ${user.public_gists}</span>
+                <span class="badge badge-secondary">Followers: ${user.followers}</span>
+                <span class="badge badge-secondary">Following: ${user.following}</span>
+                <br>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item">Company: ${user.company}</li>
+                    <li class="list-group-item">Bolg: ${user.blog}</li>
+                    <li class="list-group-item">Location: ${user.location}</li>
+                    <li class="list-group-item">Member Since: ${user.created_at}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h3 class="page-heading mb-3">
+        Latest Repos
+    </h3>
+    <div id="repos"></div>
+
+    <div class="card card-body mb-2">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="${repo.html_url}" target="_blank">${repos.name}</a>
+            </div>
+            <div class="col-md-6">
+                <span class="badge badge-secondary">Star: ${repo.stargazers_count}</span>
+                <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>
+                <span class="badge badge-secondary">Forks: ${repo.forks}</span>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
+
